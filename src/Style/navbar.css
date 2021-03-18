@@ -1,0 +1,237 @@
+.menu-wrapper{
+    position: fixed;
+}
+.header {
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: relative;
+    width: 100%;
+    z-index: 3;
+  }
+   
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  .header li a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;  
+    transition: .3s;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.6s;
+  }
+   
+  .header li a:hover{
+    color: grey
+  }
+
+  .header .logo {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+  }
+   
+  /* menu icon */
+   
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 30px;
+    position: relative;
+  }
+   
+  .header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+   
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+   
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+   
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+   
+  /* menu btn */
+   
+  .header .menu-btn {
+    display: none;
+  }
+   
+  .header .menu-btn:checked ~ .menu {
+    max-height: 390px;
+  }
+   
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+   
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+   
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+   
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+
+/* Header */
+@media only screen and (max-width: 768px){
+    .menu-wrapper{
+        width: 100%;
+    }
+    .header{
+        background-color: var(--primaryColor);
+    }  
+    .header li a {
+    padding: 25px;
+    font-size: 15px;
+    border-bottom: 1px solid grey;
+  }
+}
+ 
+@media only screen and (min-width: 768px) {
+    .menu-wrapper{
+        background: var(--primaryColor);
+        height: 66px;
+        line-height: 55px;
+        border-bottom: 1px solid grey;
+        width: 100%;
+    }
+    .header ul{
+        margin: 10px;
+    }
+    .header li {
+        float: left;
+    }
+    .header .logo {
+        line-height: 1;
+        margin: 10px;
+        font-size: 28px;
+    }
+  .header li a {
+    color: #fff;
+    font-size: 16px;
+    padding: 0px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+}
+
+
+
+
+/* fff */
+/* .navbar-container{
+    position: fixed;
+    z-index: 10;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-bottom: 1px solid grey;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container .logo{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: lighter;
+    margin-left: 30px;
+}
+
+.navbar-container .nav-links{
+    display: flex;
+    list-style: none;
+}
+.navbar-container .nav-links a{
+    color: #fff;
+    text-decoration: none;  
+    padding: 30px;
+    font-size: 16px;
+    transition: .3s;
+    text-transform: uppercase;
+
+}
+
+.navbar-container .nav-links a:hover{
+    opacity: .7;
+}
+
+#nav-toggle{
+    position: absolute;
+}
+.navbar-container .hamburger-icon{
+    display: none;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navbar-container .hamburger-icon .line{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 768px){
+    .navbar-container .nav-links{
+        position: fixed;
+        float: none;
+        z-index: 100;
+        background-color: rgba(0,0,0,0.9);
+    }
+    .navbar-container .hamburger-icon{
+        display: block;
+    }
+} */
